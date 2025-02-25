@@ -2,7 +2,7 @@
 use Fisharebest\Webtrees\I18N;
 
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
-
+use Fisharebest\Webtrees\Registry;
 
 // Used for getting tree URL
 use Fisharebest\Webtrees\Tree;
@@ -76,4 +76,4 @@ $secondaryNavigation = $secondaryNavigation[1] ?? '';
 </nav>
 
 <!-- required for nav toggler/menu -->
-<script src="<?= e(app(ModuleThemeInterface::class)->assetUrl('js/bootstrap.min.js')) ?>"></script>
+<script src="<?= e(Registry::container()->get(ModuleThemeInterface::class)->assetUrl('js/bootstrap.min.js')) ?>"></script>
